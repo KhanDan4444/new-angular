@@ -1,0 +1,30 @@
+<h1>Component-based Form</h1>
+
+<div class="step-one">
+  <h2>Step 1</h2>
+  <form [formGroup]="form1">
+    <input mat-form-field type="text" placeholder="Name" formControlName="name">
+    <input mat-form-field type="email" placeholder="Email" formControlName="email">
+    <input mat-form-field type="password" placeholder="Password" formControlName="password">
+    <button (click)="next()">Next</button>
+  </form>
+</div>
+
+<div class="step-two">
+  <h2>Step 2</h2>
+  <form [formGroup]="form2">
+    <input mat-form-field type="text" placeholder="Address" formControlName="address">
+    <input mat-form-field type="number" placeholder="Phone Number" formControlName="phone">
+    <button (click)="next()">Next</button>
+  </form>
+</div>
+
+<div class="step-three">
+  <h2>Step 3</h2>
+  <form [formGroup]="form3">
+    <input mat-form-field type="text" placeholder="Notes" formControlName="notes">
+    <button (click)="submit()">Submit</button>
+  </form>
+</div>
+
+<button (click)="activeStep = 0">Reset</button>
